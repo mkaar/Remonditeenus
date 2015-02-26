@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.remonditeenus.entities.ServiceNoteEntity" table="service_note" schema="public" catalog="remonditeenus">
+        <id name="serviceNote">
+            <column name="service_note" sql-type="numeric" precision="10" not-null="true"/>
+        </id>
+        <property name="customerFk">
+            <column name="customer_fk" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="employeeFk">
+            <column name="employee_fk" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="serviceOrderFk">
+            <column name="service_order_fk" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="serviceDeviceFk">
+            <column name="service_device_fk" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="noteAuthorType">
+            <column name="note_author_type" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="created">
+            <column name="created" sql-type="timestamp"/>
+        </property>
+        <property name="note">
+            <column name="note" sql-type="text" length="2147483647"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.remonditeenus.entities.ServiceDeviceEntity" table="service_device" schema="public" catalog="remonditeenus">
+        <id name="serviceDevice">
+            <column name="service_device" sql-type="numeric" precision="10" not-null="true"/>
+        </id>
+        <property name="serviceDeviceStatusTypeFk">
+            <column name="service_device_status_type_fk" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="deviceFk">
+            <column name="device_fk" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="serviceOrderFk">
+            <column name="service_order_fk" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="toStore">
+            <column name="to_store" sql-type="timestamp"/>
+        </property>
+        <property name="fromStore">
+            <column name="from_store" sql-type="timestamp"/>
+        </property>
+        <property name="serviceDescription">
+            <column name="service_description" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="statusChanged">
+            <column name="status_changed" sql-type="timestamp"/>
+        </property>
+        <property name="storeStatus">
+            <column name="store_status" sql-type="numeric" precision="1"/>
+        </property>
+    </class>
+</hibernate-mapping>

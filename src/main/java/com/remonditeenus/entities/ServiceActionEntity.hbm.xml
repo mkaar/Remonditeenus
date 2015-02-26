@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.remonditeenus.entities.ServiceActionEntity" table="service_action" schema="public" catalog="remonditeenus">
+        <id name="serviceAction">
+            <column name="service_action" sql-type="numeric" precision="10" not-null="true"/>
+        </id>
+        <property name="serviceActionStatusTypeFk">
+            <column name="service_action_status_type_fk" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="serviceTypeFk">
+            <column name="service_type_fk" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="serviceDeviceFk">
+            <column name="service_device_fk" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="serviceOrderFk">
+            <column name="service_order_fk" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="serviceAmount">
+            <column name="service_amount" sql-type="numeric" precision="131089"/>
+        </property>
+        <property name="price">
+            <column name="price" sql-type="numeric" precision="131089"/>
+        </property>
+        <property name="priceUpdated">
+            <column name="price_updated" sql-type="timestamp"/>
+        </property>
+        <property name="actionDescription">
+            <column name="action_description" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="created">
+            <column name="created" sql-type="timestamp"/>
+        </property>
+        <property name="createdBy">
+            <column name="created_by" sql-type="numeric" precision="10"/>
+        </property>
+    </class>
+</hibernate-mapping>

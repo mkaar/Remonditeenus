@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.remonditeenus.entities.ServiceOrderEntity" table="service_order" schema="public" catalog="remonditeenus">
+        <id name="serviceOrder">
+            <column name="service_order" sql-type="numeric" precision="10" not-null="true"/>
+        </id>
+        <property name="soStatusTypeFk">
+            <column name="so_status_type_fk" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="createdBy">
+            <column name="created_by" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="serviceRequestFk">
+            <column name="service_request_fk" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="updatedBy">
+            <column name="updated_by" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="created">
+            <column name="created" sql-type="timestamp"/>
+        </property>
+        <property name="updated">
+            <column name="updated" sql-type="timestamp"/>
+        </property>
+        <property name="statusChanged">
+            <column name="status_changed" sql-type="timestamp"/>
+        </property>
+        <property name="statusChangedBy">
+            <column name="status_changed_by" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="priceTotal">
+            <column name="price_total" sql-type="numeric" precision="131089"/>
+        </property>
+        <property name="note">
+            <column name="note" sql-type="text" length="2147483647"/>
+        </property>
+    </class>
+</hibernate-mapping>

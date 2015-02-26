@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.remonditeenus.entities.ServicePartEntity" table="service_part" schema="public" catalog="remonditeenus">
+        <id name="servicePart">
+            <column name="service_part" sql-type="numeric" precision="10" not-null="true"/>
+        </id>
+        <property name="serviceOrderFk">
+            <column name="service_order_fk" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="serviceDeviceFk">
+            <column name="service_device_fk" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="partName">
+            <column name="part_name" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="serialNo">
+            <column name="serial_no" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="partCount">
+            <column name="part_count" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="partPrice">
+            <column name="part_price" sql-type="numeric" precision="131089"/>
+        </property>
+        <property name="created">
+            <column name="created" sql-type="timestamp"/>
+        </property>
+        <property name="createdBy">
+            <column name="created_by" sql-type="numeric" precision="10"/>
+        </property>
+    </class>
+</hibernate-mapping>

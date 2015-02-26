@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.remonditeenus.entities.InvoiceEntity" table="invoice" schema="public" catalog="remonditeenus">
+        <id name="invoice">
+            <column name="invoice" sql-type="numeric" precision="10" not-null="true"/>
+        </id>
+        <property name="invoiceStatusTypeFk">
+            <column name="invoice_status_type_fk" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="serviceOrderFk">
+            <column name="service_order_fk" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="customerFk">
+            <column name="customer_fk" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="invoiceDate">
+            <column name="invoice_date" sql-type="date"/>
+        </property>
+        <property name="dueDate">
+            <column name="due_date" sql-type="date"/>
+        </property>
+        <property name="priceTotal">
+            <column name="price_total" sql-type="numeric" precision="131089"/>
+        </property>
+        <property name="receiverName">
+            <column name="receiver_name" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="referenceNumber">
+            <column name="reference_number" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="receiverAccounts">
+            <column name="receiver_accounts" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="paymentDate">
+            <column name="payment_date" sql-type="date"/>
+        </property>
+        <property name="description">
+            <column name="description" sql-type="text" length="2147483647"/>
+        </property>
+    </class>
+</hibernate-mapping>

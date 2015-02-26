@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.remonditeenus.entities.InvoiceRowEntity" table="invoice_row" schema="public" catalog="remonditeenus">
+        <id name="invoiceRow">
+            <column name="invoice_row" sql-type="numeric" precision="10" not-null="true"/>
+        </id>
+        <property name="invoiceFk">
+            <column name="invoice_fk" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="serviceActionFk">
+            <column name="service_action_fk" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="servicePartFk">
+            <column name="service_part_fk" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="actionPartDescription">
+            <column name="action_part_description" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="amount">
+            <column name="amount" sql-type="numeric" precision="131089"/>
+        </property>
+        <property name="priceTotal">
+            <column name="price_total" sql-type="numeric" precision="131089"/>
+        </property>
+        <property name="unitType">
+            <column name="unit_type" sql-type="varchar" length="200"/>
+        </property>
+        <property name="unitPrice">
+            <column name="unit_price" sql-type="numeric" precision="131089"/>
+        </property>
+        <property name="invoiceRowType">
+            <column name="invoice_row_type" sql-type="numeric" precision="1"/>
+        </property>
+    </class>
+</hibernate-mapping>

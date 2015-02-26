@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.remonditeenus.entities.DeviceEntity" table="device" schema="public" catalog="remonditeenus">
+        <id name="device">
+            <column name="device" sql-type="numeric" precision="10" not-null="true"/>
+        </id>
+        <property name="deviceTypeFk">
+            <column name="device_type_fk" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="name">
+            <column name="name" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="regNo">
+            <column name="reg_no" sql-type="varchar" length="100"/>
+        </property>
+        <property name="description">
+            <column name="description" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="model">
+            <column name="model" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="manufacturer">
+            <column name="manufacturer" sql-type="text" length="2147483647"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.remonditeenus.entities.ServiceRequestEntity" table="service_request" schema="public"
+           catalog="remonditeenus">
+        <id name="serviceRequest">
+            <column name="service_request" sql-type="numeric" precision="10" not-null="true"/>
+        </id>
+        <property name="customerFk">
+            <column name="customer_fk" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="createdBy">
+            <column name="created_by" sql-type="numeric" precision="10"/>
+        </property>
+        <property name="created">
+            <column name="created" sql-type="timestamp"/>
+        </property>
+        <property name="serviceDescByCustomer">
+            <column name="service_desc_by_customer" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="serviceDescByEmployee">
+            <column name="service_desc_by_employee" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="serviceRequestStatusTypeFk">
+            <column name="service_request_status_type_fk" sql-type="numeric" precision="10"/>
+        </property>
+    </class>
+</hibernate-mapping>

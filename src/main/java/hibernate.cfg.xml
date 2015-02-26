@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/remonditeenus</property>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <mapping resource="com/remonditeenus/entities/AddressEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.AddressEntity"/>
+        <mapping resource="com/remonditeenus/entities/AddressTypeEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.AddressTypeEntity"/>
+        <mapping resource="com/remonditeenus/entities/ContactEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.ContactEntity"/>
+        <mapping resource="com/remonditeenus/entities/ContactTypeEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.ContactTypeEntity"/>
+        <mapping resource="com/remonditeenus/entities/CustomerEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.CustomerEntity"/>
+        <mapping resource="com/remonditeenus/entities/DeviceEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.DeviceEntity"/>
+        <mapping resource="com/remonditeenus/entities/DeviceTypeEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.DeviceTypeEntity"/>
+        <mapping resource="com/remonditeenus/entities/EmployeeEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.EmployeeEntity"/>
+        <mapping resource="com/remonditeenus/entities/EmployeeRoleEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.EmployeeRoleEntity"/>
+        <mapping resource="com/remonditeenus/entities/EmployeeRoleTypeEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.EmployeeRoleTypeEntity"/>
+        <mapping resource="com/remonditeenus/entities/EntPerRelationTypeEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.EntPerRelationTypeEntity"/>
+        <mapping resource="com/remonditeenus/entities/EnterpriseEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.EnterpriseEntity"/>
+        <mapping resource="com/remonditeenus/entities/EnterprisePersonRelationEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.EnterprisePersonRelationEntity"/>
+        <mapping resource="com/remonditeenus/entities/InvoiceEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.InvoiceEntity"/>
+        <mapping resource="com/remonditeenus/entities/InvoiceRowEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.InvoiceRowEntity"/>
+        <mapping resource="com/remonditeenus/entities/InvoiceStatusTypeEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.InvoiceStatusTypeEntity"/>
+        <mapping resource="com/remonditeenus/entities/PersonEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.PersonEntity"/>
+        <mapping resource="com/remonditeenus/entities/ServiceActionEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.ServiceActionEntity"/>
+        <mapping resource="com/remonditeenus/entities/ServiceActionStatusTypeEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.ServiceActionStatusTypeEntity"/>
+        <mapping resource="com/remonditeenus/entities/ServiceDeviceEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.ServiceDeviceEntity"/>
+        <mapping resource="com/remonditeenus/entities/ServiceDeviceStatusTypeEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.ServiceDeviceStatusTypeEntity"/>
+        <mapping resource="com/remonditeenus/entities/ServiceNoteEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.ServiceNoteEntity"/>
+        <mapping resource="com/remonditeenus/entities/ServiceOrderEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.ServiceOrderEntity"/>
+        <mapping resource="com/remonditeenus/entities/ServicePartEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.ServicePartEntity"/>
+        <mapping resource="com/remonditeenus/entities/ServiceRequestEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.ServiceRequestEntity"/>
+        <mapping resource="com/remonditeenus/entities/ServiceRequestStatusTypeEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.ServiceRequestStatusTypeEntity"/>
+        <mapping resource="com/remonditeenus/entities/ServiceTypeEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.ServiceTypeEntity"/>
+        <mapping resource="com/remonditeenus/entities/ServiceUnitTypeEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.ServiceUnitTypeEntity"/>
+        <mapping resource="com/remonditeenus/entities/SoStatusTypeEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.SoStatusTypeEntity"/>
+        <mapping resource="com/remonditeenus/entities/StructUnitEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.StructUnitEntity"/>
+        <mapping resource="com/remonditeenus/entities/SubjectAttributeEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.SubjectAttributeEntity"/>
+        <mapping resource="com/remonditeenus/entities/SubjectAttributeTypeEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.SubjectAttributeTypeEntity"/>
+        <mapping resource="com/remonditeenus/entities/SubjectTypeEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.SubjectTypeEntity"/>
+        <mapping resource="com/remonditeenus/entities/UserAccountEntity.hbm.xml"/>
+        <mapping class="com.remonditeenus.entities.UserAccountEntity"/>
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>
