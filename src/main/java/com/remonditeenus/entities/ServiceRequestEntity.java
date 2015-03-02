@@ -119,4 +119,14 @@ public class ServiceRequestEntity {
         result = 31 * result + (serviceRequestStatusTypeFk != null ? serviceRequestStatusTypeFk.hashCode() : 0);
         return result;
     }
+
+    public void copyPropertiesFrom(ServiceRequestEntity entity) {
+        serviceRequest = entity.getServiceRequest();
+        customerFk = entity.getCustomerFk();
+        createdBy = entity.getCreatedBy();
+        created = entity.getCreated();
+        serviceDescByCustomer = entity.getServiceDescByCustomer();
+        serviceDescByEmployee = entity.getServiceDescByEmployee();
+        serviceRequestStatusTypeFk = entity.getServiceRequestStatusTypeFk();
+    }
 }

@@ -4,7 +4,7 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">jdbc:postgresql://localhost:5432/remonditeenus</property>
+        <property name="connection.url">jdbc:postgresql://imbi.ld.ttu.ee:5432/r58</property>
         <property name="connection.driver_class">org.postgresql.Driver</property>
         <mapping resource="com/remonditeenus/entities/AddressEntity.hbm.xml"/>
         <mapping class="com.remonditeenus.entities.AddressEntity"/>
